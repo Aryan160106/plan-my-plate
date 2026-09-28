@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* ---------- Global base ---------- */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  @apply bg-slate-50 text-slate-800 antialiased;
+}
+
+/* ---------- Colorful gradient helpers ---------- */
+.bg-brand-gradient {
+  background: linear-gradient(135deg, #10b981 0%, #0ea5e9 50%, #8b5cf6 100%);
+}
+.bg-sunset-gradient {
+  background: linear-gradient(135deg, #f59e0b 0%, #f43f5e 55%, #8b5cf6 100%);
+}
+.bg-cool-gradient {
+  background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #8b5cf6 100%);
+}
+.text-brand-gradient {
+  background: linear-gradient(135deg, #10b981, #0ea5e9, #8b5cf6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---------- Cards & inputs ---------- */
+.card {
+  @apply rounded-2xl border border-slate-200 bg-white shadow-sm;
+}
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-500 px-5 py-2.5 font-semibold text-white shadow-md shadow-emerald-500/25 transition hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60;
+}
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-2.5 font-semibold text-slate-700 shadow-sm transition hover:border-slate-400 hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-60;
+}
+.input {
+  @apply w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm text-slate-800 placeholder-slate-400 shadow-sm transition focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-400/40;
+}
+.label {
+  @apply mb-1.5 block text-sm font-medium text-slate-700;
+}
+.badge {
+  @apply inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold;
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-slate-300;
+}
